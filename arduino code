@@ -1,0 +1,195 @@
+#include <Adafruit_LiquidCrystal.h>
+Adafruit_LiquidCrystal lcd(0);
+int a = 0;
+
+void setup() {
+  lcd.begin(16, 2);
+  pinMode(2, INPUT);
+    lcd.setCursor(0, 0);
+    lcd.print("The Chainsmokers");
+    lcd.setCursor(5, 1);
+    lcd.print("CLOSER");
+}
+
+void loop() {
+  if (digitalRead(2) == HIGH) {
+    while (digitalRead(2) == HIGH); // Tugma qo'yib yuborilgunga qadar kutish
+    a++;
+    if (a > 30) a = 1; // 31 ta matndan keyin qayta boshlanadi
+    lcd.clear(); // Ekranni tozalash
+  }
+
+  if (a == 1) {
+    lcd.setCursor(5, 0);
+    lcd.print("Hey");
+  } 
+  else if (a == 2) {
+    lcd.setCursor(0, 0);
+    lcd.print("I was doing");
+    lcd.setCursor(3, 1);
+    lcd.print("just fine");
+  } 
+  else if (a == 3) {
+    lcd.setCursor(3, 0);
+    lcd.print("Before");
+    lcd.setCursor(0, 1);
+    lcd.print("I met you");
+  } 
+  else if (a == 4) {
+    lcd.setCursor(0, 0);
+    lcd.print("I drink");
+    lcd.setCursor(6, 1);
+    lcd.print("too much");
+  } 
+  else if (a == 5) {
+    lcd.setCursor(0, 0);
+    lcd.print("and that's");
+    lcd.setCursor(3, 1);
+    lcd.print("an issue");
+  }
+  else if (a == 6) {
+    lcd.setCursor(5, 0);
+    lcd.print("But");
+    lcd.setCursor(0, 1);
+    lcd.print("I'm OK");
+  } 
+  else if (a == 7) {
+    lcd.setCursor(6, 0);
+    lcd.print("Hey");
+  } 
+  else if (a == 8) {
+    lcd.setCursor(0, 0);
+    lcd.print("Tell your");
+    lcd.setCursor(0, 1);
+    lcd.print("friends it was");
+  }
+  else if (a == 9) {
+    lcd.setCursor(0, 0);
+    lcd.print("Nice to meet");
+    lcd.setCursor(5, 1);
+    lcd.print("them");
+  }
+  else if (a == 10) {
+    lcd.setCursor(0, 0);
+    lcd.print("But I hope ");
+  }
+  else if (a == 11) {
+    lcd.setCursor(0, 0);
+    lcd.print("I never");
+    lcd.setCursor(0, 1);
+    lcd.print("see them again");
+  }
+  else if (a == 12) {
+    lcd.setCursor(0, 0);
+    lcd.print("I know it");
+    lcd.setCursor(0, 1);
+    lcd.print("breaks your");
+  }
+  else if (a == 13) {
+    lcd.setCursor(4, 0);
+    lcd.print("HEART");
+  }
+  else if (a == 14) {
+    lcd.setCursor(0, 0);
+    lcd.print("Move to the");
+    lcd.setCursor(0, 1);
+    lcd.print("city in a broke");
+  }
+  else if (a == 15) {
+    lcd.setCursor(0, 0);
+    lcd.print("DOWN");
+    lcd.setCursor(5, 1);
+    lcd.print("CAR AND");
+  }
+  
+  else if (a == 16) {
+    lcd.setCursor(0, 0);
+    lcd.print("4 years");
+    lcd.setCursor(0, 1);
+    lcd.print("no calls");
+  }
+  else if (a == 17) {
+    lcd.setCursor(0, 0);
+    lcd.print("Now you're");
+    lcd.setCursor(0, 1);
+    lcd.print("looking pretty");
+  }
+  else if (a == 18) {
+    lcd.setCursor(0, 0);
+    lcd.print("in a hotel");
+    lcd.setCursor(6, 1);
+    lcd.print("BAR");
+  }
+  else if (a == 19) {
+    lcd.setCursor(0, 0);
+    lcd.print("And I I I I I");
+    lcd.setCursor(0, 1);
+    lcd.print("Can't STOP");
+  }
+  else if (a == 20) {
+    lcd.setCursor(0, 0);
+    lcd.print("No I I I I I");
+    lcd.setCursor(0, 1);
+    lcd.print("Can't STOP");
+  }
+  else if (a == 21) {
+    lcd.setCursor(0, 0);
+    lcd.print("So Baby pull me");
+    lcd.setCursor(0, 1);
+    lcd.print("Closer");
+  }
+  else if (a == 22) {
+    lcd.setCursor(0, 0);
+    lcd.print("In the back seat");
+    lcd.setCursor(0, 1);
+    lcd.print("of your ROVER");
+  }
+  else if (a == 23) {
+    lcd.setCursor(0, 0);
+    lcd.print("that I know");
+    lcd.setCursor(0, 1);
+    lcd.print("you can Afford");
+  }
+  else if (a == 24) {
+    lcd.setCursor(0, 0);
+    lcd.print("Bite that tattoo");
+    lcd.setCursor(0, 1);
+    lcd.print("on your shoulder");
+  }
+  else if (a == 25) {
+    lcd.setCursor(0, 0);
+    lcd.print("Pull the");
+    lcd.setCursor(0, 1);
+    lcd.print("sheets right");
+  }
+  else if (a == 26) {
+    lcd.setCursor(0, 0);
+    lcd.print("off the");
+    lcd.setCursor(6, 1);
+    lcd.print("Corner");
+  }
+  else if (a == 27) {
+    lcd.setCursor(0, 0);
+    lcd.print("of that Mattress");
+    lcd.setCursor(0, 1);
+    lcd.print("that you stole");
+  }
+  else if (a == 28) {
+    lcd.setCursor(0, 0);
+    lcd.print("From your");
+    lcd.setCursor(5, 1);
+    lcd.print("ROOMMATE");
+  }
+  else if (a == 29) {
+    lcd.setCursor(0, 0);
+    lcd.print("Back in");
+    lcd.setCursor(5, 1);
+    lcd.print("Boulder");
+  }
+  else if (a == 30) {
+    lcd.setCursor(0, 0);
+    lcd.print("We aint ever");
+    lcd.setCursor(0, 1);
+    lcd.print("Getting OLDER");
+  }
+}
